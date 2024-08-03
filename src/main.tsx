@@ -10,7 +10,7 @@ import { App, AuthProvider, store } from '@/app';
 ReactDOM.createRoot(document.getElementById('kiber-tap-root')!).render(
 	<React.StrictMode>
 		{/*<BrowserRouter>*/}
-		<BrowserRouter basename={'/kiber-one-game-front/'}>
+		<BrowserRouter basename={'/kiber-tap-front/'}>
 			<Provider store={store}>
 				<AuthProvider>
 					<App/>
