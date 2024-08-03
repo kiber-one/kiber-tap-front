@@ -1,0 +1,48 @@
+@import "./mixins";
+
+:root {
+	// Font
+	--kt-default-font-family: "Inter", sans-serif;
+	--kt-default-font-size: #{rem(16)};
+	--kt-default-font-weight: 400;
+	--kt-default-line-height: 1;
+
+	// Colors
+	--kt-default-text-color: var(--kt-white-color);
+
+	//--kt-background-gradient: radial-gradient(circle, rgba(32, 135, 177, 1) 0%, rgba(0, 0, 0, 1) 85%);
+	--kt-background-gradient: radial-gradient(circle, rgb(119, 17, 13) 0%, rgba(0, 0, 0, 1) 85%);
+
+	--kt-black-color: #000;
+	--kt-white-color: #fff;
+
+	--kt-dark-blue-color: #00263c;
+	--kt-light-blue-color: #1f566d;
+
+	--kt-dark-gray-color: #2c2c2c;
+	--kt-light-gray-color: #888;
+
+	// Radii
+	--kt-default-radius: #{rem(12)};
+	--kt-radius-18: #{rem(18)};
+
+	// Transitions
+	--kt-default-transition: 0.3s ease-in-out;
+
+	//
+	--text-neon-shadow-sm: 0 0 #{rem(6)} rgba(255, 189, 189, 0.92),
+	0 0 #{rem(6)} rgba(240, 195, 34, 0.34),
+	0 0 #{rem(2)} rgba(191, 226, 255, 0.52),
+	0 0 #{rem(10)} rgba(227, 67, 59, 0.92),
+	0 0 #{rem(1)} rgba(202, 228, 225, 0.78),
+	0 0 #{rem(15)} rgba(145, 36, 31, 0.92);
+
+	--text-neon-shadow-lg: 0 0 #{rem(6)} rgba(255, 189, 189, 0.92),
+	0 0 #{rem(6)} rgba(240, 195, 34, 0.34),
+	0 0 #{rem(2)} rgba(191, 226, 255, 0.52),
+	0 0 #{rem(14)} rgba(227, 67, 59, 0.92),
+	0 0 #{rem(1)} rgba(202, 228, 225, 0.78),
+	0 0 #{rem(34)} rgba(145, 36, 31, 0.92);
+
+	--icon-neon-shadow: drop-shadow(0 0 #{rem(.6)} rgba(255, 189, 189, 0.92)) drop-shadow(0 0 #{rem(1)} rgba(240, 195, 34, 0.34)) drop-shadow(0 0 #{rem(.2)} rgba(191, 226, 255, 0.52)) drop-shadow(0 0 #{rem(1.4)} rgba(227, 67, 59, 0.52)) drop-shadow(0 0 #{rem(.1)} rgba(202, 228, 225, 0.78)) drop-shadow(0 0 #{rem(3.4)} rgba(145, 36, 31, 0.62));
+}

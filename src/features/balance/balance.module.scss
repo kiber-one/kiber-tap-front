@@ -1,0 +1,18 @@
+@import "@styles/mixins";
+
+.balance {
+	gap: rem(10);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		@include adaptive-clamp('width', 42, 36);
+	}
+}
+
+.coins {
+	font-weight: 600;
+	@include adaptive-clamp('font-size', 46, 30);
+	text-shadow: var(--text-neon-shadow-lg);
+}

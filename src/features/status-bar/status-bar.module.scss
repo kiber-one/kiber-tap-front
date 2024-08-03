@@ -1,0 +1,33 @@
+@import "@styles/mixins";
+
+.statusBar {
+	width: 100%;
+	position: fixed;
+	padding-block: rem(10);
+	@include adaptive-clamp('bottom', 86, 78);
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item {
+	gap: rem(10);
+	display: flex;
+	align-items: center;
+}
+
+.icon {
+	svg {
+		@include adaptive-clamp('font-size', 28, 20);
+		filter: var(--icon-neon-shadow);
+	}
+}
+
+.text {
+	padding-bottom: rem(5);
+	font-weight: 500;
+	@include adaptive-clamp('font-size', 15, 13)
+}

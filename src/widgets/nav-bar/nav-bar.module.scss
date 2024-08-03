@@ -1,0 +1,22 @@
+@import "@styles/mixins";
+
+.nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.list {
+	display: flex;
+	padding: rem(15) rem(15) rem(25) rem(15);
+	background-color: var(--kt-dark-gray-color);
+	border-top-left-radius: var(--kt-radius-18);
+	border-top-right-radius: var(--kt-radius-18);
+}
+
+.listItem {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}

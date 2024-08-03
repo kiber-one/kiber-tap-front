@@ -1,0 +1,47 @@
+@import "@styles/mixins";
+
+.coinBody {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+
+.coin {
+	padding: rem(20) rem(50);
+
+	img {
+		width: 100%;
+		opacity: .5;
+		transition: transform .3s ease, opacity var(--kt-default-transition);
+	}
+
+	&:global(.active) {
+		img {
+			opacity: 1;
+
+			&:active {
+				transform: scale(0.90);
+			}
+		}
+	}
+}
+
+.popup {
+	position: absolute;
+	animation: popup-animation 1.2s ease-out;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+@keyframes popup-animation {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+}

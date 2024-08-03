@@ -1,0 +1,52 @@
+@import "@styles/mixins";
+
+.navButton {
+	--nav-button-transition: .1s ease-in-out;
+
+	position: relative;
+	gap: rem(5);
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: var(--kt-light-gray-color);
+	transition: gap var(--nav-button-transition),
+	color var(--nav-button-transition),
+	transform .2s ease-in-out;
+
+	&:global(.active) {
+		gap: 0;
+		color: var(--kt-white-color);
+		text-shadow: var(--text-neon-shadow-sm);
+		transform: translateY(rem(-6));
+
+		&::before {
+			filter: var(--icon-neon-shadow);
+			opacity: 1;
+		}
+
+		.icon {
+			filter: var(--icon-neon-shadow);
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: rem(-5);
+		width: rem(5);
+		height: rem(5);
+		opacity: 0;
+		border-radius: 50%;
+		background-color: var(--kt-white-color);
+		transition: opacity var(--nav-button-transition);
+	}
+}
+
+.icon {
+	@include adaptive-clamp('font-size', 24, 20);
+}
+
+.text {
+	@include adaptive-clamp('font-size', 14, 10);
+}

@@ -1,0 +1,68 @@
+@import "@styles/mixins";
+
+.container {
+	@include adaptive-clamp('margin-bottom', 144, 107);
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.inner {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.info {
+	margin-block: rem(15) rem(30);
+	padding-inline: rem(10);
+	gap: rem(15);
+	display: flex;
+	justify-content: center;
+}
+
+.infoItem {
+	padding: rem(10);
+	gap: rem(8);
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	border-radius: var(--kt-default-radius);
+	background-color: var(--kt-dark-gray-color);
+	@include adaptive-clamp('font-size', 14, 10);
+}
+
+.infoDescription {
+	color: var(--kt-light-gray-color);
+}
+
+.stats {
+	gap: rem(10);
+	display: flex;
+	flex-direction: column;
+}
+
+.statsLine {
+	@include adaptive-clamp('font-size', 16, 14);
+	display: flex;
+	justify-content: space-between;
+}
+
+.statsBar {
+	width: 100%;
+	height: rem(15);
+	overflow: hidden;
+	border-radius: rem(25);
+	background-color: var(--kt-dark-gray-color);
+}
+
+.statsBarInner {
+	height: 100%;
+	width: 40%;
+	border-radius: rem(25);
+	background-color: orange;
+	box-shadow: var(--text-neon-shadow-lg);
+}

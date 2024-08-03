@@ -1,0 +1,8 @@
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: #161616;
+	animation: fade-up .25s ease-in-out forwards;
+}
